@@ -17,8 +17,21 @@ def encode(user_password):
 
 # decode function to be written by partner
 def decode(encoded):
-    pass
+    decoded = ""
+    for char in encoded:
+        if char == "0":
+            decoded += "7"
 
+        elif char == "1":
+            decoded += "8"
+
+        elif char == "2":
+            decoded += "9"
+
+        else:
+            decoded += str(int(char)-3)
+
+    return decoded
 
 # main function
 if __name__ == '__main__':
